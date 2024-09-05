@@ -1,0 +1,12 @@
+serverest:
+  url_back:
+    backend: https://serverest.dev
+  login:
+    login: /login
+  users:
+    users: /usuarios
+  products:
+    products: /produtos
+  cart:
+    cart: /carrinhos
+    
