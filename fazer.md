@@ -4,6 +4,8 @@
 - for loop
 - random values in python
 - template for failure cases
+- write as json inside of yaml file
+- name every test individually
 
 ------
 
@@ -24,3 +26,9 @@ crie um usuario comum
 faça login com usuario comum
 busque o produto e adicione ao carrinho
 conclua a compra
+
+-------
+
+- maybe validate some shit in frontend 
+
+COLOCAR GIT ACTIONS
