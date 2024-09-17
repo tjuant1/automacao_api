@@ -11,3 +11,5 @@ rand_number = random.sample(range(0, 10),4)
 numbers = ''.join(str(element) for element in rand_number)
 
 boolean = ['true', 'false']
+
+invalid_id = '1MQzGyfDuuGga27b'
