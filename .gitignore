@@ -2,3 +2,4 @@ fazer
 logs
 venv
 keywords.resource
+__pycache__

@@ -10,6 +10,10 @@ Name                User Endpoints
 Suite Setup         Setup Suites
 Suite Teardown
 
+*** Variables ***
+
+${id}
+
 *** Test Cases ***
 POST Non Admin User Register Success
     [Documentation]    Create a new user with valid data and common access
@@ -68,13 +72,7 @@ POST Admin User Register Success
 GET Search For Users In Database
     [Documentation]    Search on database for all users registered
 
-    Faker Data
-
-    ${headers}=    Headers Login
-    ${body}=    Body User    false
-
-    ${response}=    POST On Session    session    ${serverest.users}    json=${body}    headers=${headers}
-    ${id}=    Set Variable    ${response.json()['_id']}
+    ${headers}    ${id}    ${response}=    POST User    false
 
     ${response}=    GET On Session     session    ${serverest.users}   headers=${headers}
 
@@ -82,20 +80,15 @@ GET Search For Users In Database
     Should Not Be Empty    ${string_qnt}
     Should Not Be Empty    ${response.json()['usuarios']}
 
+    ${list}=    Evaluate    expression    ${response.json()} == list
+
     # Delete user from database to keep it clean
     ${response}=    DELETE On Session    session    ${serverest.users}/${id}    expected_status=200
 
 GET Search For User Using ID
     [Documentation]    Search on database for an user by ID
     
-    Faker Data
-
-    ${headers}=    Headers Login
-    ${body}=    Body User    false
-
-    ${response}=    POST On Session    session    ${serverest.users}    json=${body}    headers=${headers}
-
-    ${id}=    Set Variable    ${response.json()['_id']}
+    ${headers}    ${id}    ${response}=    POST User    false  
 
     ${response}=    GET On Session     session    ${serverest.users}/${id}   headers=${headers}
 
