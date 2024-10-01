@@ -1,0 +1,4 @@
+messages:
+  delete_success: Registro excluído com sucesso
+  register_success: Cadastro realizado com sucesso
+  update_success: Registro alterado com sucesso
