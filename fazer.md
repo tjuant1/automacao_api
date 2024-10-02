@@ -1,17 +1,15 @@
 - Nome de variavel, variavel
-- log many de uma lista
-- tuple list
+Done - tuple list
 - for loop
-- random values in python
+Done - random values in python
 - template for failure cases
 - write as json inside of yaml file
-- name every test individually
+Done - name every test individually
 
 ------
 
 - Fluxo de cadastro de usuario e login
-- Testar todos os endpoints de usuarios
-(não precisa de token para gerar usuario)
+Done - Testar todos os endpoints de usuarios
 - Fazer testes de falha no post do usuario
 - Testar todos os endpoints de produtos
 - Testar todos os endpoints de carrinhos

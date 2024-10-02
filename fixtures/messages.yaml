@@ -2,3 +2,5 @@ messages:
   delete_success: Registro excluído com sucesso
   register_success: Cadastro realizado com sucesso
   update_success: Registro alterado com sucesso
+  product_exists: Já existe produto com esse nome
+  admin_route: Rota exclusiva para administradores
