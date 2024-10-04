@@ -4,3 +4,5 @@ messages:
   update_success: Registro alterado com sucesso
   product_exists: Já existe produto com esse nome
   admin_route: Rota exclusiva para administradores
+  invalid_data: Email e/ou senha inválidos
+  login_success: Login realizado com sucesso

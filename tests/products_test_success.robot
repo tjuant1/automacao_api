@@ -7,13 +7,14 @@ Metadata            Platform    API
 
 Name                Products Endpoints Success
 
-Suite Setup         Setup Suites
+Suite Setup         Create User and Login    true
 
 *** Test Cases ***
 POST - Register A New Product
-    [Documentation]
+    [Documentation]    Create a new product using an admin uer
+    [Tags]    products
 
-    @{product_values}    Evaluate    [['Cable', 'Table', 'Water'], ['1m flexible cable', '1x1m wooden table', 'really fresh water'], 
-    ...    {'price_cable': '10'}, {'price_table': '150'}, {'price_water': '2'}]
+    Create Product Variable
 
-
+    ${headers}=    Headers Token    ${token}
+    ${body}=    Body Products

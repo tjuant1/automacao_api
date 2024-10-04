@@ -7,9 +7,9 @@ Metadata            Platform    API
 
 Name                Complete Flow
 
-Suite Setup    User Register    true
-Suite Teardown    User Delete
+# Suite Setup    User Register    true
+# Suite Teardown    User Delete
 
-*** Test Cases ***
-login
-    Log    ola
+# *** Test Cases ***
+# login
+#     Log    ola

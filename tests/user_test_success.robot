@@ -12,6 +12,7 @@ Suite Setup         Setup Suites
 *** Test Cases ***
 POST - Non Admin User Register Success
     [Documentation]    Create a new user with valid data and common access
+    [Tags]    user
 
     Faker Data
 
@@ -36,6 +37,7 @@ POST - Non Admin User Register Success
 
 POST - Admin User Register Success
     [Documentation]    Create a new user with valid data and admin access
+    [Tags]    user
 
     Faker Data
 
@@ -60,6 +62,7 @@ POST - Admin User Register Success
 
 GET - Search For All Users In Database
     [Documentation]    Search on database for all users registered
+    [Tags]    user
 
     ${headers}    ${id}=    POST User    false
 
@@ -77,6 +80,7 @@ GET - Search For All Users In Database
 
 GET - Search For User Using ID
     [Documentation]    Search on database for an user by ID
+    [Tags]    user
 
     ${headers}    ${id}=    POST User    false  
 
@@ -91,6 +95,7 @@ GET - Search For User Using ID
 
 PUT - Create A New User When Try To Update With Non Existent ID
     [Documentation]    Use an invalid ID to update but create a new user instead
+    [Tags]    user
 
     Faker Data
     
@@ -107,6 +112,7 @@ PUT - Create A New User When Try To Update With Non Existent ID
 
 PUT - Update A Previously Created User
     [Documentation]    Update administrator flag from false to true
+    [Tags]    user
 
     Faker Data
 
@@ -128,7 +134,8 @@ PUT - Update A Previously Created User
 
 DELETE - Delete An User Using Its ID
     [Documentation]    Delete a previously created user by its ID
-
+    [Tags]    user
+    
     ${headers}    ${id}=    POST User    false
 
     ${response}=    DELETE On Session    session    ${serverest.users}/${id}    headers=${headers}    expected_status=200

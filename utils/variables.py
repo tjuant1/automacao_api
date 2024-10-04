@@ -10,6 +10,8 @@ passw = ''.join(str(element) for element in rand_pass)
 rand_number = random.sample(range(0, 10),4)
 numbers = ''.join(str(element) for element in rand_number)
 
+rand_number_one = random.sample(range(10, 100),1)
+
 boolean = ['true', 'false']
 
 invalid_id = '1MQzGyfDuuGga27b'

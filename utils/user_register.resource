@@ -30,5 +30,5 @@ User Register
 User Delete
     [Documentation]    Delete a registered user from database
 
-    ${response}=    DELETE On Session    session    ${serverest.users}/${S_ID}    headers=${S_HEADERS}
+    ${response}=    DELETE On Session    session    ${serverest.users}/${S_ID}    headers=${headers}
     

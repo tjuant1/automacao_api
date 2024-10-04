@@ -5,7 +5,7 @@ Done - random values in python
 - template for failure cases
 - write as json inside of yaml file
 Done - name every test individually
-
+- adicionar tags
 ------
 
 - Fluxo de cadastro de usuario e login
