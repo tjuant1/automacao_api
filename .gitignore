@@ -5,3 +5,6 @@ keywords.resource
 __pycache__
 fazer
 fazer.md
+.pabotsuitenames
+run.py
+run
