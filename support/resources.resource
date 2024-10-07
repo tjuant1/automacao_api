@@ -6,6 +6,7 @@ Library    RequestsLibrary
 Library    FakerLibrary
 Library    Collections
 Library    OperatingSystem
+Library    configs.py
 
 Variables    ../utils/variables.py
 Variables    ../fixtures/endpoints.yaml
