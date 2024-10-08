@@ -6,3 +6,6 @@ messages:
   admin_route: Rota exclusiva para administradores
   invalid_data: Email e/ou senha inválidos
   login_success: Login realizado com sucesso
+  admin_route: Rota exclusiva para administradores
+  token_issue: Token de acesso ausente, inválido, expirado ou usuário do token não existe mais
+  product_in_use: Não é permitido excluir produto que faz parte de carrinho

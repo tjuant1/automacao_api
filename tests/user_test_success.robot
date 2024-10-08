@@ -32,7 +32,6 @@ POST - Non Admin User Register Success
 
     Should Be Equal    ${response.json()['email']}    ${email}
 
-    # Delete user from database to keep it clean
     ${response}=    DELETE On Session    session    ${serverest.users}/${id}    expected_status=200
 
 POST - Admin User Register Success
@@ -57,14 +56,13 @@ POST - Admin User Register Success
 
     Should Be Equal    ${response.json()['email']}    ${email}
 
-    # Delete user from database to keep it clean
     ${response}=    DELETE On Session    session    ${serverest.users}/${id}    expected_status=200
 
 GET - Search For All Users In Database
     [Documentation]    Search on database for all users registered
     [Tags]    user
 
-    ${headers}    ${id}=    POST User    false
+    ${id}=    POST User    false
 
     ${response}=    GET On Session     session    ${serverest.users}   headers=${headers}
 
@@ -75,14 +73,13 @@ GET - Search For All Users In Database
     ${list}=    Evaluate    isinstance(${response.json()['usuarios']}, list)
     Should Be True    ${list}
 
-    # Delete user from database to keep it clean
     ${response}=    DELETE On Session    session    ${serverest.users}/${id}    expected_status=200
 
 GET - Search For User Using ID
     [Documentation]    Search on database for an user by ID
     [Tags]    user
 
-    ${headers}    ${id}=    POST User    false  
+    ${id}=    POST User    false  
 
     ${response}=    GET On Session     session    ${serverest.users}/${id}   headers=${headers}
 
@@ -90,7 +87,6 @@ GET - Search For User Using ID
 
     Should Be Equal    ${response.json()['email']}    ${email}
 
-    # Delete user from database to keep it clean
     ${response}=    DELETE On Session    session    ${serverest.users}/${id}    expected_status=200
 
 PUT - Create A New User When Try To Update With Non Existent ID
@@ -107,7 +103,6 @@ PUT - Create A New User When Try To Update With Non Existent ID
     Should Be Equal    ${response.json()['message']}    ${messages['register_success']}
     Should Not Be Empty    ${response.json()['_id']}
 
-    # Delete user from database to keep it clean
     ${response}=    DELETE On Session    session    ${serverest.users}/${invalid_id}   expected_status=200
 
 PUT - Update A Previously Created User
@@ -129,14 +124,13 @@ PUT - Update A Previously Created User
 
     Should Be Equal    ${response.json()['message']}    ${messages['update_success']}
 
-    # Delete user from database to keep it clean
     ${response}=    DELETE On Session    session    ${serverest.users}/${id}    headers=${headers}
 
 DELETE - Delete An User Using Its ID
     [Documentation]    Delete a previously created user by its ID
     [Tags]    user
     
-    ${headers}    ${id}=    POST User    false
+    ${id}=    POST User    false
 
     ${response}=    DELETE On Session    session    ${serverest.users}/${id}    headers=${headers}    expected_status=200
 
