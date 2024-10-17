@@ -7,7 +7,8 @@ Metadata            Platform    API
 
 Name                User Endpoints Success
 
-Suite Setup         Setup Suites
+Suite Setup         Create User and Login    true
+Suite Teardown      Delete User
 
 *** Test Cases ***
 POST - Non Admin User Register Success
