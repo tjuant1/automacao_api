@@ -15,6 +15,5 @@ def tag():
 
 def robot_execution():
     args = parse_args()
-    print("Execução padrão do robot")
 
     return args.robot
