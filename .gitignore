@@ -9,3 +9,5 @@ fazer.md
 run.py
 run
 listener.py
+dockerfile
+docker-compose.yaml
